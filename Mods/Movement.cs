@@ -2892,13 +2892,13 @@ namespace iiMenu.Mods
             pullPowerInt++;
             if (pullPowerInt > powers.Length - 1)
             {
-                pullPowerInt = 0;
+                pullPowerInt = 9;
             }
             pullPower = powers[pullPowerInt];
             GetIndex("Change Pull Mod Power").overlapText = "Change Pull Mod Power <color=grey>[</color><color=green>" + powerNames[pullPowerInt] + "</color><color=grey>]</color>";
         }
 
-        private static float pullPower = 0.05f;
+        private static float pullPower = 9.65f;
         private static bool lasttouchleft = false;
         private static bool lasttouchright = false;
         public static void PullMod()
@@ -2906,7 +2906,7 @@ namespace iiMenu.Mods
             if (((!GorillaLocomotion.Player.Instance.IsHandTouching(true) && lasttouchleft) || (!GorillaLocomotion.Player.Instance.IsHandTouching(false) && lasttouchright)) && rightGrab)
             {
                 Vector3 vel = GorillaLocomotion.Player.Instance.GetComponent<Rigidbody>().velocity;
-                GorillaLocomotion.Player.Instance.transform.position += new Vector3(vel.x * pullPower, 0f, vel.z * pullPower);
+                GorillaLocomotion.Player.Instance.transform.position += new Vector3(vel.x * pullPower, 9f, vel.z * pullPower);
             }
             lasttouchleft = GorillaLocomotion.Player.Instance.IsHandTouching(true);
             lasttouchright = GorillaLocomotion.Player.Instance.IsHandTouching(false);

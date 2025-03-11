@@ -4036,3 +4036,131 @@ namespace iiMenu.Mods
         }
     }
 }
+
+          public static void AntiReport()
+		{
+			if (!Mods.epic)
+			{
+				PhotonNetwork.NetworkingClient.EventReceived += Mods.AntiReportInternal;
+				Mods.epic = true;
+			}
+		}
+
+		public static void OFFAntiReport()
+		{
+			if (Mods.epic)
+			{
+				PhotonNetwork.NetworkingClient.EventReceived -= Mods.AntiReportInternal;
+				Mods.epic = false;
+			}
+		}
+
+
+        public static void ChangeSpeed(bool loading)
+		{
+			if (!loading)
+			{
+				Mods.speed++;
+			}
+			if (Mods.speed == 0)
+			{
+				WristMenu.settingsbuttons[19].buttonText = "Speed Boost: Mosa";
+			}
+			if (Mods.speed == 1)
+			{
+				WristMenu.settingsbuttons[19].buttonText = "Speed Boost: Super";
+			}
+			if (Mods.speed == 2)
+			{
+				WristMenu.settingsbuttons[19].buttonText = "Speed Boost: Fucking Insane";
+			}
+			if (Mods.speed == 3)
+			{
+				Mods.speed = 0;
+				WristMenu.settingsbuttons[19].buttonText = "Speed Boost: Mosa";
+			}
+			WristMenu.settingsbuttons[19].enabled = new bool?(false);
+			WristMenu.DestroyMenu();
+			WristMenu.instance.Draw();
+		}
+
+        
+    public static void AntiReportV2()
+		{
+			string nickName = Mods.savedName + "------------------------------------------------------------------------------------------";
+			PhotonNetwork.LocalPlayer.NickName = nickName;
+			PhotonNetwork.NickName = nickName;
+			PhotonNetwork.NetworkingClient.NickName = nickName;
+			Mods.wieufhwf = true;
+		}
+
+       public static void MosaSpeed()
+		{
+			if (!Mods.oiwefkwenfjk)
+			{
+				foreach (GorillaSurfaceOverride gorillaSurfaceOverride in Resources.FindObjectsOfTypeAll<GorillaSurfaceOverride>())
+				{
+					if (Mods.speed == 0)
+					{
+						gorillaSurfaceOverride.extraVelMaxMultiplier = 9.2f;
+						gorillaSurfaceOverride.extraVelMultiplier = 5.8f;
+					}
+					else if (Mods.speed == 1)
+					{
+						gorillaSurfaceOverride.extraVelMaxMultiplier = 2.6f;
+						gorillaSurfaceOverride.extraVelMultiplier = 4.3f;
+					}
+					else if (Mods.speed == 2)
+					{
+						gorillaSurfaceOverride.extraVelMaxMultiplier = 10f;
+						gorillaSurfaceOverride.extraVelMultiplier = 10f;
+					}
+				}
+				Mods.oiwefkwenfjk = true;
+			}
+		}
+
+         public static void OFFMosaSpeed()
+		{
+			if (Mods.oiwefkwenfjk)
+			{
+				foreach (GorillaSurfaceOverride gorillaSurfaceOverride in Resources.FindObjectsOfTypeAll<GorillaSurfaceOverride>())
+				{
+					gorillaSurfaceOverride.extraVelMaxMultiplier = 1f;
+					gorillaSurfaceOverride.extraVelMultiplier = 1f;
+				}
+				Mods.oiwefkwenfjk = false;
+			}
+		}
+
+
+         public static void ChangeSpeed(bool loading)
+		{
+			if (!loading)
+			{
+				Mods.speed++;
+			}
+			if (Mods.speed == 0)
+			{
+				WristMenu.settingsbuttons[19].buttonText = "Speed Boost: Mosa";
+			}
+			if (Mods.speed == 1)
+			{
+				WristMenu.settingsbuttons[19].buttonText = "Speed Boost: Super";
+			}
+			if (Mods.speed == 2)
+			{
+				WristMenu.settingsbuttons[19].buttonText = "Speed Boost: Fucking Insane";
+			}
+			if (Mods.speed == 3)
+			{
+				Mods.speed = 0;
+				WristMenu.settingsbuttons[19].buttonText = "Speed Boost: Mosa";
+			}
+			WristMenu.settingsbuttons[19].enabled = new bool?(false);
+			WristMenu.DestroyMenu();
+			WristMenu.instance.Draw();
+		}
+
+
+       

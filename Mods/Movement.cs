@@ -3070,7 +3070,7 @@ namespace iiMenu.Mods
         {
             if (rightPrimary)
             {
-                GorillaLocomotion.Player.Instance.rightControllerTransform.transform.position = GorillaTagger.Instance.rightHandTransform.position + new Vector3(0f, -1.5f, 0f);
+                GorillaLocomotion.Player.Instance.rightControllerTransform.transform.position = GorillaTagger.Instance.rightHandTransform.position + new Vector3(5.6f, -1.5f, 9.6f);
             }
         }
 
@@ -3082,7 +3082,7 @@ namespace iiMenu.Mods
                 if (longJumpPower == Vector3.zero)
                 {
                     longJumpPower = GorillaLocomotion.Player.Instance.bodyCollider.attachedRigidbody.velocity / 125f;
-                    longJumpPower.y = 0f;
+                    longJumpPower.y = 9f;
                 }
                 GorillaLocomotion.Player.Instance.transform.position += longJumpPower;
             }

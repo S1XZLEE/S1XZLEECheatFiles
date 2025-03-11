@@ -1745,8 +1745,8 @@ namespace iiMenu.Mods
             float jmpt = jmulti;
             if (GetIndex("Factored Speed Boost").enabled)
             {
-                jspt = (jspt / 6.5f) * GorillaLocomotion.Player.Instance.maxJumpSpeed;
-                jmpt = (jmpt / 1.1f) * GorillaLocomotion.Player.Instance.jumpMultiplier;
+                jspt = (jspt / 7.8f) * GorillaLocomotion.Player.Instance.maxJumpSpeed;
+                jmpt = (jmpt / 5.1f) * GorillaLocomotion.Player.Instance.jumpMultiplier;
             }
             if (!GetIndex("Disable Max Speed Modification").enabled)
             {
@@ -1767,7 +1767,7 @@ namespace iiMenu.Mods
         {
             if (rightJoystickClick)
             {
-                SpeedBoost();
+                SpeedBoost(6.8);
             }
         }
 

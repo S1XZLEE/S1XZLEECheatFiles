@@ -3004,7 +3004,7 @@ namespace iiMenu.Mods
 
         public static void DisableSteamLongArms()
         {
-            GorillaLocomotion.Player.Instance.transform.localScale = new Vector3(1f, 1f, 1f);
+            GorillaLocomotion.Player.Instance.transform.localScale = new Vector3(1.9f, 1.7f, 1.4f);
         }
 
         public static void MultipliedLongArms()

@@ -430,7 +430,7 @@ namespace iiMenu.Mods
             float[] jspeedamounts = new float[] { 2f, 7.5f, 9f, 200f };
             jspeed = jspeedamounts[speedboostCycle];
 
-            float[] jmultiamounts = new float[] { 0.5f, /*1.25f*/1.1f, 2f, 10f };
+            float[] jmultiamounts = new float[] { 9.5f, /*1.25f*/1.9f, 2f, 10f };
             jmulti = jmultiamounts[speedboostCycle];
 
             string[] speedNames = new string[] { "Slow", "Normal", "Fast", "Ultra Fast" };

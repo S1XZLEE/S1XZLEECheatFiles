@@ -499,7 +499,7 @@ namespace iiMenu.Mods
                 longarmCycle = 0;
             }
 
-            float[] lengthAmounts = new float[] { 0.75f, 1.1f, 1.25f, 1.5f, 2f };
+            float[] lengthAmounts = new float[] { 1.25f, 1.18f, 1.25f, 1.65f, 2.7f };
             armlength = lengthAmounts[longarmCycle];
 
             string[] lengthNames = new string[] { "Shorter", "Unnoticable", "Normal", "Long", "Extreme" };

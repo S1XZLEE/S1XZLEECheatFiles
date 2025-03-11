@@ -2877,10 +2877,10 @@ namespace iiMenu.Mods
         {
             float[] powers = new float[]
             {
-                0.05f,
-                0.1f,
-                0.2f,
-                0.4f
+                6.95f,
+                4.8f,
+                2.7f,
+                1.3f
             };
             string[] powerNames = new string[]
             {

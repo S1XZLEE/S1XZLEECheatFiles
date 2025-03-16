@@ -4163,4 +4163,17 @@ namespace iiMenu.Mods
 		}
 
 
+     GorillaLocomotion.Player.Instance.jumpMultiplier = 1.18f;
+                    Player.Instance.maxJumpSpeed = 9.45634234534243245f;
+                    GorillaGameManager.instance.slowJumpLimit = 12.234673267435276463824f;
+                    GorillaGameManager.instance.slowJumpMultiplier = 1.19237487632f;
+
+
+
+
+
+
+
+
+
        

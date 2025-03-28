@@ -5003,6 +5003,45 @@ namespace EditArmLength
     }
 }
 
+using BepInEx;
+using UnityEngine;
+using System;
+
+namespace GorillaTagMod
+{
+    [BepInPlugin("com.yourname.pullmod", "Overpowered Pull Mod", "1.0.0")]
+    public class PullMod : BaseUnityPlugin
+    {
+        private void Start()
+        {
+            Logger.LogInfo("Overpowered Pull Mod Loaded!");
+        }
+
+        private void Update()
+        {
+            // Detect when the player activates the pull action (e.g., pressing a button).
+            if (Input.GetKeyDown(KeyCode.P)) // P as an example key for pulling
+            {
+                PerformPull();
+            }
+        }
+
+        private void PerformPull()
+        {
+            GameObject player = Player.instance.gameObject;
+            Vector3 direction = (player.transform.position - Camera.main.transform.position).normalized;
+            float strength = 1000f; // Increase this for overpowered pull
+
+            Rigidbody rb = player.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.AddForce(direction * strength, ForceMode.Impulse); // Add force to pull the player
+                Logger.LogInfo("Pull activated with strength: " + strength);
+            }
+        }
+    }
+}
+
 
 
 
